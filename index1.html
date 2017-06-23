@@ -34,39 +34,88 @@
 </head>
 <body>
 
- <section id="Perfil" class="download bg-primary text-center" style="background-color:lightblue; color:black" ;>
-       <div class="container">
-           <div class="row">
-               <div class="col-md-8 col-md-offset-2">
-                   <h2 class="section-heading">Profile</h2>
-                   <div class="form-group row">
-                       <label for="example-text-input" class="col-2 col-form-label">Age Range</label>
-                       <div class="col-10">
-                           <input class="form-control" type="name" id="example-text-input">
-                       </div>
-                   </div>
-                   <div class="form-group row">
-                       <label for="example-search-input" class="col-2 col-form-label">Zip code</label>
-                       <div class="col-10">
-                           <input class="form-control" type="username" id="example-search-input">
-                       </div>
-                   </div>
-                   <div class="form-group row">
-                       <label for="example-email-input" class="col-2 col-form-label">Origin/Background</label>
-                       <div class="col-10">
-                           <input class="form-control" type="email" id="example-email-input">
-                       </div>
-                   </div>
-                   <div class="form-group row">
-                       <label for="example-email-input" class="col-2 col-form-label">Location</label>
-                       <div class="col-10">
-                           <input class="form-control" type="password" id="example-email-input">
-                       </div>
-                   </div>
-               </div>
-           </div>
+ <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Group Now</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#download">Sign Up</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Connect With Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+   <section id="seccion" style="background-color: grey">
+    <h1>Start Creating Your Event</h1>
+       <div id="map" style="width:350px;height:300px;background-color: lightblue; padding left: 5px; border-color: blue; border-width: 5px;">
+           <script type="text/javascript">
+           function myMap() {
+               var mapOptions = {
+                   center: new google.maps.LatLng(32.84, -96.78),
+                   zoom: 10,
+                   mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               var map = new google.maps.Map(document.getElementById("map"),
+                   mapOptions);
+           }
+           </script>
+           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4P2BW2hTrntIOyInFcBHWBzS5DO0emr0&callback=myMap">
+           </script>
        </div>
-       <button type="button" class="btn btn-success">SUBMIT</button>
+          
+       </div>
+      // <div class="container-fluid">
+           <h4><b>Add an event</b></h4>
+           <form action="/action_page.php">
+               Event Type:
+               <br>
+               <select>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Bar">Bar</option>
+                <option value="Sports">Sports</option>
+                <option value="Park">Park</option>
+               </select>
+               <br>
+               <br> Location:
+               <br>
+               <input type="text" name="location" id="location">
+               <br>                             
+               When (date and time):
+               <br>
+               <input type="datetime-local" name="bdaytime">
+               <br>
+               <br>
+               <button type="button" value="Submit" id="sub">Submit</button>
+               <input type="reset">
+               <br>
+               <br>
+           </form>
+       </div>
+       <table class="table table-bordered" style="text-align: center; width: 90%; align-items: center;">
+           <tr>
+               <th>Event</th>
+               <th>Location</th>
+               <th>Date/Time</th>
+               <th>Weather forecast</th>
+           </tr>
+       </table>
+
    </section>
    <footer>
        <div class="container">

@@ -537,3 +537,8 @@ img::-moz-selection {
   background: #E74B37;
 
 }
+
+#seccion {
+
+    padding-top: 25px;
+}
