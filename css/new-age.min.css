@@ -2,6 +2,8 @@
     font-family: Catamaran, Helvetica, Arial, sans-serif;
     font-weight: 200;
     letter-spacing: 1px
+
+
 }
 
 .body-font {
@@ -161,6 +163,11 @@ p {
     .navbar-default.affix .nav>li>a:hover {
         color: #fdcc52
     }
+}
+#nav {
+ ..
+ margin:40px auto;
+ ..
 }
 
 header {
@@ -487,14 +494,22 @@ footer ul li a:hover {
     font-size: 11px
 }
 
+select{
+    color: black !important;
+}
+
+input{
+    color: black !important;
+}
+
 ::-moz-selection {
-    color: #fff;
+    color: #000;
     text-shadow: none;
     background: #222
 }
 
 :selection {
-    color: #fff;
+    color: #000;
     text-shadow: none;
     background: #222
 }
@@ -520,4 +535,5 @@ img::-moz-selection {
 .loginBtn--google:hover,
 .loginBtn--google:focus {
   background: #E74B37;
+
 }
